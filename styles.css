@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInLeft 2s ease-out;
+}
+
+.main-header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-header nav ul li a {
+    font-family: 'Roboto', sans-serif;
+    color: #6a5acd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.main-header nav ul li a:hover {
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    color: #fff;
+    -webkit-background-clip: border-box;
+}
+
+.main-header img {
+    width: 80%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    background-size: 200% 200%;
+    animation: animateGradient 10s ease infinite;
+    border-radius: 15px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    background: #6a5acd;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #483d8b;
+    transform: scale(1.05);
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.services, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+    animation: fadeIn 2s ease-out;
+}
+
+.services:hover, .contact:hover {
+    background-color: #f0e6ff;
+}
+
+.services h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6a5acd;
+}
+
+.service-box {
+    background: #f4f4f4;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center; /* Center the content */
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    background: #e6e6fa;
+}
+
+.service-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #6a5acd;
+}
+
+.service-box ul {
+    text-align: center; /* Center the bullet points */
+    padding: 0;
+    list-style: none;
+}
+
+.service-box ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.service-box .price {
+    font-size: 1.5em;
+    color: #6a5acd;
+    font-weight: bold;
+    text-align: center; /* Center the price */
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+    border-color: #6a5acd;
+}
+
+.contact form .btn {
+    background: #6a5acd;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact form .btn:hover {
+    background: #483d8b;
+    transform: scale(1.05);
+}
+
+.main-footer {
+    background: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out;
+}
+
+.benefits {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6a5acd;
+}
+
+.benefit-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.benefit-box:hover {
+    transform: translateY(-5px);
+    background: #e6e6fa;
+}
+
+.benefit-box img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.benefit-box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.benefit-box h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #6a5acd;
+    font-family: 'Roboto', sans-serif;
+}
+
+.benefit-box p {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .main-header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .service-box, .pricing-box {
+        margin: 20px 0;
+    }
+
+    .benefit-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit-box img {
+        margin: 0 0 20px 0;
+    }
+
+    .benefit-box:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
