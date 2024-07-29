@@ -70,7 +70,7 @@ body {
         margin-bottom: 60px; /* Add a margin to create space between the header and the hero section */
     }
 
-    /* Move the image above the title */
+    /* Ensure header image does not interfere with text */
     .main-header img {
         width: 100%; /* Make image full width */
         height: auto; /* Maintain aspect ratio */
@@ -80,8 +80,7 @@ body {
         top: 0; /* Align to top */
         left: 0; /* Align to left */
         z-index: -1; /* Place image behind text */
-        opacity: 0; /* Hide image initially */
-        transition: opacity 0.3s ease-in-out; /* Smooth transition for image */
+        opacity: 1; /* Ensure image is visible */
     }
 
     .main-header h1 {
