@@ -70,7 +70,7 @@ body {
 
     .main-header h1 {
         font-size: 1.8em; /* Smaller font size for the heading */
-        margin: 10px 0; /* Adjust margin */
+        margin: 20px 0; /* Add extra margin for space between title and nav */
     }
 
     .main-header img {
@@ -96,6 +96,18 @@ body {
     .main-header nav ul li a {
         padding: 8px 15px; /* Adjust padding for smaller screens */
         font-size: 0.9em; /* Adjust font size */
+        border: 2px solid #333; /* Add border to create outlined button */
+        border-radius: 5px; /* Rounded corners for buttons */
+        background-color: transparent; /* Transparent background */
+        color: #333; /* Text color */
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    }
+
+    .main-header nav ul li a:hover,
+    .main-header nav ul li a:focus {
+        background-color: #333; /* Background color on hover/focus */
+        color: #fff; /* Text color on hover/focus */
     }
 }
 
