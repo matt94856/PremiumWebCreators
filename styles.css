@@ -374,17 +374,21 @@ body {
         padding: 20px; /* Adjust padding inside the form */
         margin: 0; /* Remove margins for better fit */
         box-shadow: none; /* Remove shadow for a cleaner look */
+        box-sizing: border-box; /* Ensure form does not overflow */
+        width: 100%; /* Ensure form takes full width */
     }
 
     .contact form label {
         font-size: 1em; /* Adjust font size for labels */
         margin: 8px 0 4px; /* Adjust margin for labels */
+        display: block; /* Ensure labels are block level */
     }
 
     .contact form input, .contact form textarea {
         width: 100%; /* Make inputs and textareas full width */
         padding: 10px; /* Adjust padding for inputs and textareas */
         margin-bottom: 15px; /* Adjust margin */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
     }
 
     .contact form .btn {
