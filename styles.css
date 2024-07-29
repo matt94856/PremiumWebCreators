@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInLeft 2s ease-out;
+}
+
+.main-header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-header nav ul li a {
+    font-family: 'Roboto', sans-serif;
+    color: #6a5acd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.main-header nav ul li a:hover {
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    color: #fff;
+    -webkit-background-clip: border-box;
+}
+
+.main-header img {
+    width: 80%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Mobile Styles for Main Header */
+@media (max-width: 768px) {
+
+    .main-header {
+        padding: 10px 5px; /* Reduce padding for smaller screens */
+        text-align: center; /* Center align text for mobile view */
+    }
+
+    .main-header h1 {
+        font-size: 1.8em; /* Smaller font size for the heading */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .main-header img {
+        width: 100%; /* Make image full width */
+        max-height: 200px; /* Adjust max height for mobile */
+        object-fit: contain; /* Ensure the image fits within container */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .main-header nav ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .main-header nav ul li {
+        margin: 10px 0; /* Adjust margin for menu items */
+    }
+
+    .main-header nav ul li a {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Adjust font size */
+    }
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    background-size: 200% 200%;
+    animation: animateGradient 10s ease infinite;
+    border-radius: 15px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    background: #6a5acd;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #483d8b;
+    transform: scale(1.05);
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mobile Styles for Hero Section */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 50px 20px; /* Reduce padding for smaller screens */
+        text-align: center; /* Center text for mobile view */
+    }
+
+    .hero h2 {
+        font-size: 2em; /* Smaller font size for the heading */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjust font size for the paragraph */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .hero .btn {
+        padding: 12px 25px; /* Adjust padding for the button */
+        font-size: 1em; /* Adjust font size for the button */
+        display: inline-block; /* Ensure button does not stretch full width */
+        margin: 0 auto; /* Center the button horizontally */
+    }
+}
+
+.services, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+    animation: fadeIn 2s ease-out;
+}
+
+.services:hover, .contact:hover {
+    background-color: #f0e6ff;
+}
+
+.services h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6a5acd;
+}
+
+.service-box {
+    background: #f4f4f4;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.service-box a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    background: #e6e6fa;
+}
+
+.service-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #6a5acd;
+}
+
+.service-box ul {
+    text-align: center;
+    padding: 0;
+    list-style: none;
+}
+
+.service-box ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.service-box .price {
+    font-size: 1.5em;
+    color: #6a5acd;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mobile Styles for Services Section */
+@media (max-width: 768px) {
+
+    .services {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .service-box {
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin: 10px 0; /* Adjust margin */
+        box-shadow: none; /* Remove shadow for a cleaner look */
+        text-align: center; /* Center text inside service boxes */
+    }
+
+    .service-box h3 {
+        font-size: 1.5em; /* Smaller heading size for mobile */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .service-box ul {
+        padding: 0; /* Remove padding */
+    }
+
+    .service-box ul li {
+        font-size: 1em; /* Smaller font size for list items */
+        margin: 5px 0; /* Adjust margin */
+    }
+
+    .service-box .price {
+        font-size: 1.2em; /* Smaller font size for price */
+    }
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form horizontally */
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text inside the form to the left */
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact form input, .contact form textarea {
+    width: calc(100% - 30px); /* Adjust width to fit inside padding */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact form input:focus, .contact form textarea:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+    outline: none;
+}
+
+.contact form .btn {
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    display: block; /* Use block display to allow margin centering */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+.contact form .btn:hover {
+    background: #483d8b;
+    transform: scale(1.05);
+}
+
+/* Mobile Styles for Contact Section */
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .contact form {
+        padding: 20px; /* Adjust padding inside the form */
+        margin: 0; /* Remove margins for better fit */
+        box-shadow: none; /* Remove shadow for a cleaner look */
+    }
+
+    .contact form label {
+        font-size: 1em; /* Adjust font size for labels */
+        margin: 8px 0 4px; /* Adjust margin for labels */
+    }
+
+    .contact form input, .contact form textarea {
+        width: 100%; /* Make inputs and textareas full width */
+        padding: 10px; /* Adjust padding for inputs and textareas */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .contact form .btn {
+        padding: 12px 25px; /* Adjust padding for the button */
+        font-size: 1em; /* Adjust font size for the button */
+        display: block; /* Ensure button takes full width */
+        margin: 10px auto; /* Center button horizontally */
+    }
+}
+
+.main-footer {
+    background: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out;
+}
+
+.benefits {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6a5acd;
+}
+
+.benefit-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.benefit-box:hover {
+    transform: translateY(-5px);
+    background: #e6e6fa;
+}
+
+.benefit-box img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.benefit-box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.benefit-box h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #6a5acd;
+    font-family: 'Roboto', sans-serif;
+}
+
+.benefit-box p {
+    font-size: 1.2em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.container .left {
+    flex: 1;
+    background-color: #f9f9f9;
+}
+
+.container .right {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Styles for Benefits Section */
+@media (max-width: 768px) {
+
+    .benefits {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .benefit-box {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .benefit-box img {
+        max-width: 100%; /* Ensure images fit within their container */
+        margin-bottom: 15px; /* Space between image and text */
+    }
+
+    .benefit-box h3 {
+        font-size: 1.5em; /* Smaller heading size for mobile */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .benefit-box p {
+        font-size: 1em; /* Smaller font size for paragraphs */
+        margin-bottom: 0; /* Remove margin at bottom */
+    }
+
+    .benefit-box:nth-child(even) {
+        flex-direction: column; /* Ensure column layout for even items */
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* Existing styles for other sections */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-header nav ul li a {
+    font-family: 'Roboto', sans-serif;
+    color: #6a5acd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.main-header nav ul li a:hover {
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    color: #fff;
+}
+
+/* Styles for Projects Section */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.container .left {
+    flex: 1;
+    background: linear-gradient(135deg, #6a5acd, #ff7f50);
+    background-size: 200% 200%;
+    animation: animateGradient 10s ease infinite;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    color: #fff;
+    border: none; /* Remove border */
+}
+
+.container .left h2 {
+    font-family: 'Playfair Display', serif; /* Premium font */
+    font-size: 2.5em;
+    margin: 0;
+    font-style: italic; /* Italicize text */
+}
+
+.container .left p {
+    font-family: 'Montserrat', sans-serif; /* Standard font for paragraph */
+    font-size: 1.2em;
+    margin: 20px 0 0; /* Margin to space out from h2 */
+    text-align: center; /* Center align text */
+    color: #fff; /* White color */
+}
+
+.container .right {
+    flex: 2;
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    font-family: 'Playfair Display', serif; /* Premium font */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #6a5acd;
+}
+
+.project p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mobile Styles for Projects Section */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column; /* Stack left and right sections vertically */
+    }
+
+    .container .left, .container .right {
+        flex: 1 1 100%; /* Ensure both sections take full width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .container .left {
+        background: linear-gradient(135deg, #6a5acd, #ff7f50);
+        background-size: 200% 200%;
+        animation: animateGradient 10s ease infinite;
+        padding: 20px; /* Adjust padding for mobile */
+        text-align: center; /* Center align text */
+    }
+
+    .container .left h2 {
+        font-size: 2em; /* Smaller font size for the heading */
+        margin: 0 0 15px; /* Adjust margin */
+    }
+
+    .container .left p {
+        font-size: 1em; /* Adjust font size for the paragraph */
+        margin: 10px 0; /* Adjust margin */
+        color: #fff; /* Ensure text color is white */
+    }
+
+    .container .right {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .project {
+        margin-bottom: 20px; /* Adjust margin for projects */
+    }
+
+    .project h3 {
+        font-size: 1.6em; /* Smaller font size for project headings */
+        margin-bottom: 10px; /* Adjust margin */
+        color: #6a5acd; /* Ensure color matches theme */
+    }
+
+    .project p {
+        font-size: 1em; /* Adjust font size for project descriptions */
+        color: #333; /* Ensure text color is readable */
+    }
+
+    .project img {
+        width: 100%; /* Make images full width */
+        max-width: none; /* Remove max-width restriction */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project img:hover {
+        transform: scale(1.05); /* Scale image on hover */
+    }
+}
+
+
