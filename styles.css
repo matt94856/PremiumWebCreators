@@ -84,12 +84,13 @@ body {
         padding: 0;
         margin: 0;
         display: flex;
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: center; /* Center items horizontally */
+        flex-direction: row; /* Align menu items horizontally */
+        justify-content: center; /* Center items horizontally */
+        flex-wrap: wrap; /* Allow wrapping if needed */
     }
 
     .main-header nav ul li {
-        margin: 10px 0; /* Adjust margin for menu items */
+        margin: 0 5px; /* Adjust margin for menu items */
     }
 
     .main-header nav ul li a {
