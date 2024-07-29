@@ -81,6 +81,7 @@ body {
         left: 0; /* Align to left */
         z-index: -1; /* Place image behind text */
         opacity: 1; /* Ensure image is visible */
+        transition: opacity 1s ease-in-out; /* Smooth transition for image visibility */
     }
 
     .main-header h1 {
@@ -88,6 +89,8 @@ body {
         margin: 15px 0; /* Adjust margin for space between title and nav */
         position: relative; /* Ensure heading is on top of image */
         z-index: 1; /* Position above background image */
+        opacity: 1; /* Ensure title is visible */
+        transition: opacity 1s ease-in-out; /* Smooth transition for title visibility */
     }
 
     .main-header nav {

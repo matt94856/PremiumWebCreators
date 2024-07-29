@@ -48,9 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons.forEach(button => {
         button.style.backgroundColor = '#d3d3d3';
         button.style.color = '#333';
-        button.style.backgroundImage = 'url("https://github.com/matt94856/PremiumWebCreators/blob/main/Logo1.png?raw=true")'; // Set background image for buttons only
-        button.style.backgroundSize = 'cover'; // Ensure background image covers the button
-        button.style.backgroundPosition = 'center'; // Center the background image
         button.addEventListener('mouseenter', () => {
             button.style.backgroundColor = '#a9a9a9';
         });
@@ -154,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
         buttons.forEach(button => {
             button.style.backgroundColor = '#d3d3d3';
             button.style.color = '#333';
-            button.style.backgroundImage = 'none'; // Remove background image on mobile
             button.removeEventListener('mouseenter', () => {
                 button.style.backgroundColor = '#a9a9a9';
             });
@@ -168,3 +164,4 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
     document.querySelector('.main-header img').style.opacity = 1;
 });
+
