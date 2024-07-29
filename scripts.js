@@ -160,3 +160,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+window.addEventListener('load', function() {
+    document.querySelector('.main-header img').style.opacity = 1;
+});
+
