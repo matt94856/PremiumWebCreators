@@ -67,6 +67,7 @@ body {
         padding: 10px 5px; /* Reduce padding for smaller screens */
         text-align: center; /* Center align text for mobile view */
         position: relative; /* Enable positioning context for image */
+        margin-bottom: 60px; /* Add a margin to create space between the header and the hero section */
     }
 
     /* Move the image above the title */
@@ -79,6 +80,8 @@ body {
         top: 0; /* Align to top */
         left: 0; /* Align to left */
         z-index: -1; /* Place image behind text */
+        opacity: 0; /* Hide image initially */
+        transition: opacity 0.3s ease-in-out; /* Smooth transition for image */
     }
 
     .main-header h1 {
@@ -124,6 +127,11 @@ body {
         background-color: rgba(255, 255, 255, 0.7); /* Background color on hover/focus */
         color: #333; /* Text color on hover/focus */
     }
+    
+    /* Ensure image becomes visible after title load */
+    window.addEventListener('load', function() {
+        document.querySelector('.main-header img').style.opacity = 1;
+    });
 }
 
 .hero {
