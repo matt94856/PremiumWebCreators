@@ -70,7 +70,7 @@ body {
 
     .main-header h1 {
         font-size: 1.8em; /* Smaller font size for the heading */
-        margin: 20px 0; /* Add extra margin for space between title and nav */
+        margin: 15px 0; /* Adjust margin for space between title and nav */
     }
 
     .main-header img {
@@ -82,7 +82,7 @@ body {
 
     .main-header nav ul {
         padding: 0;
-        margin: 0;
+        margin: 15px 0 0; /* Add margin at the top */
         display: flex;
         flex-direction: row; /* Align menu items horizontally */
         justify-content: center; /* Center items horizontally */
@@ -94,10 +94,10 @@ body {
     }
 
     .main-header nav ul li a {
-        padding: 8px 15px; /* Adjust padding for smaller screens */
-        font-size: 0.9em; /* Adjust font size */
-        border: 2px solid #333; /* Add border to create outlined button */
-        border-radius: 5px; /* Rounded corners for buttons */
+        padding: 6px 12px; /* Smaller padding for sleeker buttons */
+        font-size: 0.8em; /* Smaller font size */
+        border: 1px solid #333; /* Thinner border for outlined button */
+        border-radius: 4px; /* Slightly rounded corners */
         background-color: transparent; /* Transparent background */
         color: #333; /* Text color */
         text-decoration: none; /* Remove underline */
