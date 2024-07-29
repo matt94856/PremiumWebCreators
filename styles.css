@@ -66,23 +66,37 @@ body {
     .main-header {
         padding: 10px 5px; /* Reduce padding for smaller screens */
         text-align: center; /* Center align text for mobile view */
+        position: relative; /* Enable positioning context for image */
+    }
+
+    /* Move the image above the title */
+    .main-header img {
+        width: 100%; /* Make image full width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 200px; /* Limit max height */
+        object-fit: cover; /* Cover container */
+        position: absolute; /* Position image absolutely */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        z-index: -1; /* Place image behind text */
     }
 
     .main-header h1 {
         font-size: 1.8em; /* Smaller font size for the heading */
         margin: 15px 0; /* Adjust margin for space between title and nav */
+        position: relative; /* Ensure heading is on top of image */
+        z-index: 1; /* Position above background image */
     }
 
-    .main-header img {
-        width: 100%; /* Make image full width */
-        max-height: 200px; /* Adjust max height for mobile */
-        object-fit: contain; /* Ensure the image fits within container */
-        margin: 10px 0; /* Adjust margin */
+    .main-header nav {
+        position: relative; /* Ensure nav is on top of image */
+        z-index: 1; /* Position above background image */
+        margin: 15px 0 0; /* Add margin at the top */
     }
 
     .main-header nav ul {
         padding: 0;
-        margin: 15px 0 0; /* Add margin at the top */
+        margin: 0; /* Remove default margin */
         display: flex;
         flex-direction: row; /* Align menu items horizontally */
         justify-content: center; /* Center items horizontally */
@@ -96,18 +110,19 @@ body {
     .main-header nav ul li a {
         padding: 6px 12px; /* Smaller padding for sleeker buttons */
         font-size: 0.8em; /* Smaller font size */
-        border: 1px solid #333; /* Thinner border for outlined button */
+        border: 1px solid #fff; /* Thinner border for outlined button */
         border-radius: 4px; /* Slightly rounded corners */
-        background-color: transparent; /* Transparent background */
-        color: #333; /* Text color */
+        background-image: url('https://github.com/matt94856/PremiumWebCreators/blob/main/Logo1.png?raw=true'); /* Set background image */
+        background-size: cover; /* Cover the entire button */
+        color: #fff; /* Text color */
         text-decoration: none; /* Remove underline */
         transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
     }
 
     .main-header nav ul li a:hover,
     .main-header nav ul li a:focus {
-        background-color: #333; /* Background color on hover/focus */
-        color: #fff; /* Text color on hover/focus */
+        background-color: rgba(255, 255, 255, 0.7); /* Background color on hover/focus */
+        color: #333; /* Text color on hover/focus */
     }
 }
 
