@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for navigation links
     const navLinks = document.querySelectorAll('nav a');
-    
-    for (let link of navLinks) {
+    navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
-    }
+    });
 
     // Smooth scroll for Learn More button
     const learnMoreButton = document.querySelector('.hero .btn');
@@ -50,9 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
         button.style.color = '#333';
         button.addEventListener('mouseenter', () => {
             button.style.backgroundColor = '#a9a9a9';
+            button.style.transform = 'translateY(-2px)';
         });
         button.addEventListener('mouseleave', () => {
             button.style.backgroundColor = '#d3d3d3';
+            button.style.transform = 'translateY(0)';
         });
     });
 
@@ -60,10 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceBoxes = document.querySelectorAll('.service-box, .pricing-box');
     serviceBoxes.forEach(box => {
         box.addEventListener('mouseenter', () => {
-            box.style.transform = 'scale(1.05)';
+            box.style.transform = 'scale(1.05) rotate(3deg)';
+            box.style.transition = 'transform 0.3s ease-in-out';
         });
         box.addEventListener('mouseleave', () => {
-            box.style.transform = 'scale(1)';
+            box.style.transform = 'scale(1) rotate(0)';
         });
     });
 
@@ -71,10 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const benefitBoxImages = document.querySelectorAll('.benefit-box img');
     benefitBoxImages.forEach(img => {
         img.addEventListener('mouseenter', () => {
-            img.style.transform = 'scale(1.1)';
+            img.style.transform = 'scale(1.1) rotate(-3deg)';
+            img.style.transition = 'transform 0.3s ease-in-out';
         });
         img.addEventListener('mouseleave', () => {
-            img.style.transform = 'scale(1)';
+            img.style.transform = 'scale(1) rotate(0)';
         });
     });
 
@@ -85,10 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('mouseenter', () => {
             button.style.backgroundColor = '#ff7f50';
             button.style.color = '#fff';
+            button.style.transform = 'rotateY(180deg)';
+            button.style.transition = 'background-color 0.3s ease, color 0.3s ease, transform 0.5s ease';
         });
         button.addEventListener('mouseleave', () => {
             button.style.backgroundColor = 'transparent';
             button.style.color = '#000';
+            button.style.transform = 'rotateY(0)';
         });
     });
 
@@ -115,6 +121,45 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // 3D tilt effect for boxes
+    const tiltElements = document.querySelectorAll('.service-box, .pricing-box, .benefit-box img');
+    tiltElements.forEach(element => {
+        element.style.transformStyle = 'preserve-3d';
+        element.style.perspective = '1000px';
+        element.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = element.getBoundingClientRect();
+            const x = e.clientX - left;
+            const y = e.clientY - top;
+            const rotateX = (y / height - 0.5) * 20; // adjust values for effect
+            const rotateY = (x / width - 0.5) * -20;
+            element.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = 'rotateX(0) rotateY(0)';
+        });
+    });
+
+    // Glowing effect for buttons
+    const glowingButtons = document.querySelectorAll('.btn');
+    glowingButtons.forEach(button => {
+        button.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.5)';
+        button.addEventListener('mouseenter', () => {
+            button.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.8)';
+        });
+        button.addEventListener('mouseleave', () => {
+            button.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.5)';
+        });
+    });
+
+    // Parallax effect for hero section background
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`; // adjust for effect
+        });
+    }
 
     // Mobile-specific adjustments
     if (window.innerWidth <= 768) {
@@ -164,4 +209,3 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
     document.querySelector('.main-header img').style.opacity = 1;
 });
-
